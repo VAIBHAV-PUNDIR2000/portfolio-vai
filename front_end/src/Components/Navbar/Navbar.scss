@@ -1,0 +1,134 @@
+
+.app__navbar{
+    width:  100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  1rem 2 rem;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px) ;
+    -webkit-backdrop-filter: blur(4px);
+   
+    position:fixed;
+    z-index: 2;
+}
+
+.app__navbar-logo{
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    
+}
+.app__navbar-links{
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li{
+        margin:0 1rem 0 1rem;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    div{
+       
+        border-radius: 50%;
+        margin-bottom: 5px;
+    }
+    a{
+        color:var(--gray-color);
+        text-decoration: none;
+        flex-direction: column;
+        font-weight: 400;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+        color: #000;
+        }
+    }
+
+    @media screen and (max-width:900px){
+        display: none;
+    }
+    
+}
+
+.app__navbar-menu{
+    
+    
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    svg{
+        height: 20px;
+        width: 20px;
+        box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+    }
+
+    div{
+        position:fixed;
+        top:0;
+        bottom: 0;
+  
+        right:0;
+        z-index: 1s5;
+        padding: 1rem;
+        width: 80%;
+        background-color: rgba(33, 149, 188, 0.2);  
+ backdrop-filter: brightness(80%);
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+  
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+  
+        li {
+          margin: 1rem;
+  
+          a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+  
+            transition: all 0.3s ease-in-out;
+  
+            &:hover {
+              color: var(--secondary-color);
+            }
+          }
+        }
+    }
+    
+   
+}
+
+
+.app__navbar-logo-text{
+   
+    text-decoration: overline;
+    font-family: 'Lily Script One', sans-serif;
+                                                
+    cursor: pointer;
+    user-select: none;
+    font-size: xx-large;
+}
