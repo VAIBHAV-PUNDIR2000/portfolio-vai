@@ -61,6 +61,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 1rem;
+
+    @media screen and (min-width:900px  ){
+        display: none;
+    }
 
 
     svg{
@@ -73,12 +78,11 @@
         position:fixed;
         top:0;
         bottom: 0;
-  
         right:0;
-        z-index: 1s5;
+        z-index: 15;
         padding: 1rem;
         width: 80%;
-        background-color: rgba(33, 149, 188, 0.2);  
+        background-color: rgba(180, 233, 251, 0.95);  
  backdrop-filter: brightness(80%);
         height: 100vh;
         display: flex;
@@ -109,6 +113,7 @@
             font-size: 1rem;
             text-transform: uppercase;
             font-weight: 500;
+            
   
             transition: all 0.3s ease-in-out;
   
