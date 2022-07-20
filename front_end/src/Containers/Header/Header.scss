@@ -1,0 +1,145 @@
+.badge-cmp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+#header{
+    position: relative;
+}
+
+
+.app__header-skills{
+    user-select: none;
+
+    @media screen and (max-width:600px) {
+        flex-direction: column;
+    }
+
+   div{
+    margin: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
+
+.app__header{
+    padding: 2rem;
+    
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+}
+
+
+.header__avatar-marquee{
+
+z-index: 3;
+
+
+
+    @media screen and (max-width: 450px) {
+        padding: 1rem 1rem 2rem;
+      }
+   
+
+   
+
+    img{
+        // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        // border-radius: 50%;
+        // padding: 1rem;
+    }
+}
+.header__avatar-marquee-text{
+    padding: 1rem;
+    // text-align: center;
+    margin: 1rem;
+    height: 10rem;
+    width: 20rem;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: var(--lightGray-color);
+    div{text-align: center;}
+    
+}
+
+
+.header__image{
+  width: 100%;
+  justify-content: space-around;
+  display:flex;
+  flex-wrap: wrap;
+  position: absolute;
+// padding: 2rem;
+
+
+  
+    img{
+        max-height: 6rem;
+        position: relative;
+        margin: 1rem;
+    }
+    
+    @media screen and (min-width: 900px)
+    {
+    :nth-child(3){
+        margin-right: 18rem;
+        top:2rem;
+    }
+    :nth-child(1){
+       
+        top:3rem;
+    }
+    :nth-child(2){
+       
+        top:10rem;
+    }
+    :nth-child(4){
+        
+        top:8rem;
+    }
+  
+    :nth-child(5){
+      
+        top:6rem;
+    }
+}
+
+
+
+    @media screen and (max-width: 900px) {
+        
+        position: relative;
+        :nth-child(3){
+            margin-right: 1rem;
+            top:2rem;
+        }
+    
+      }
+    @media screen and (max-width: 450px) {
+    //    position: static;
+        // top:5rem;
+
+        img{
+padding: 1rem;
+}
+
+
+       :nth-child(3){
+        margin-right: 1rem;
+        top:0rem;
+    }
+      }
+
+      
+    
+}
+
+
+.header__subsection{
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+    }
+}

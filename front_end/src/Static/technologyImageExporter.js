@@ -1,0 +1,14 @@
+import "./Constants/firebase.png";
+import "./Constants/flutter.png";
+import "./Constants/react_js.png";
+import "./Constants/avatar.svg";
+import "./Constants/figma.svg";
+import "./Constants/javascript.svg";
+import "./Constants/python.png";
+export { default as react_js } from "./Constants/react_js.png";
+export { default as flutter } from "./Constants/flutter.png";
+export { default as firebase } from "./Constants/firebase.png";
+export { default as avatar } from "./Constants/avatar.svg";
+export { default as python } from "./Constants/python.png";
+export { default as figma } from "./Constants/figma.svg";
+export { default as javascript } from "./Constants/javascript.svg";

@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <VscPerson fontSize={50} />
-        <span className="app__navbar-logo-text">PortfolioVai</span>
+        <span className="app__navbar-logo-text">Vaibhav-pundir</span>
       </div>
       <ul className="app__navbar-links">
         {["Home", "About", "Contact", "Projects", "Skills", "Footer"].map(
