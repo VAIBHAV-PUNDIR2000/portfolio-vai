@@ -1,3 +1,6 @@
+
+
+
 .badge-cmp{
     display: flex;
     align-items: center;
@@ -28,7 +31,7 @@
 .app__header{
     padding: 2rem;
     
-    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+
 }
 
 
@@ -54,24 +57,27 @@ z-index: 3;
 .header__avatar-marquee-text{
     padding: 1rem;
     // text-align: center;
-    margin: 1rem;
+    margin: 2nnprem;
     height: 10rem;
     width: 20rem;
     border-radius: 5px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    background-color: var(--lightGray-color);
-    div{text-align: center;}
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    background-color: rgba(9,9,9,0.1);
+    backdrop-filter: blur(4px);
+    div{text-align: center;
+    }
     
 }
 
 
 .header__image{
   width: 100%;
+//   overflow: hidden;
   justify-content: space-around;
   display:flex;
   flex-wrap: wrap;
   position: absolute;
-// padding: 2rem;
+padding: 2rem;
 
 
   
@@ -141,5 +147,86 @@ padding: 1rem;
     flex-wrap: wrap;
     @media screen and (min-width: 768px) {
         flex-direction: column;
+    }
+}
+
+
+.app__header-background{
+    height: 100%;
+    width: 90%;
+    // background-color: rgba(0,0,0,0.3);
+
+    position:absolute;
+    display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+        overflow-wrap: hidden;
+        flex-wrap: wrap;
+        
+
+
+
+    div{
+        height: 100px;
+        width: 100px;
+        position: relative;
+        
+        // margin: 1rem;
+        border-radius: 50%;
+        opacity: 0.1;
+        
+    }
+    :nth-child(1){
+       top:2rem;
+    scale:3;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+        // display: block;
+    }
+  
+
+        // display: block;
+    
+    :nth-child(2){
+       bottom: 5rem;
+       transform: scale(0.5);
+       background-color: #FBAB7E;
+background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+        // display: block;
+    }
+    :nth-child(3){
+       left:1rem;
+       transform: scale(2 );
+       background-color: #09522b;
+background-image: linear-gradient(45deg, #0a6735 0%, #FFFB7D 100%);
+
+        // display: block;
+    }
+    :nth-child(4){
+       top:5rem;
+       transform: scale(0.8);
+        // display: block;
+        background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+
+    }
+    :nth-child(5){
+       bottom:10rem;
+       transform: scale(3);
+       background-color: #FBDA61;
+background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+
+        // display: block;
+    }
+
+    div{
+        @media screen and (max-width: 768px) {
+            height: 100px;
+            width: 100px;
+        
+    }
     }
 }

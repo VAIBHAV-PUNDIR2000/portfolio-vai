@@ -14,7 +14,7 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import "./Header.scss";
 
 const Header = () => {
-  const { speak, cancel } = useSpeechSynthesis();
+  const { speak, cancel, voices } = useSpeechSynthesis();
   const aboutMe = [
     "Hello there!❤️, My Self Vaibhav Pundir",
     "I love working with Front-end techs as well as designs",
@@ -34,9 +34,7 @@ const Header = () => {
   useEffect(() => {
     const textSetter = () => {
       if (shouldSpeak) {
-        speak({ text: marqueeText });
-      } else {
-        cancel();
+        speak({ text: marqueeText, voice: voices[4] });
       }
       //confusing logic huh,vaibhav was confused too
       setTimeout(() => {
@@ -50,8 +48,24 @@ const Header = () => {
     textSetter();
   }, [marqueeText, shouldSpeak]);
 
+  useEffect(() => {
+    shouldSpeak ? console.log("hello") : cancel();
+  }, [shouldSpeak]);
+
   return (
     <div className="app__header app__div " id="header">
+      <motion.div
+        className="app__header-background"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ type: "spring", bounce: 0.25 }}
+
+        // transition={{ duration: 1000, delayChildren: 0.2 }}
+      >
+        {[1, 2, 3, 4, 5].map((_, key) => (
+          <motion.div></motion.div>
+        ))}
+      </motion.div>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
@@ -86,7 +100,17 @@ const Header = () => {
       <div className="app__flex header__subsection ">
         <div className="header__avatar-marquee app__wrapper app__flex ">
           <img src={avatar}></img>
-          <div className="header__avatar-marquee-text ">
+          <motion.div
+            className="header__avatar-marquee-text "
+            animate="show"
+            whileInView={{
+              opacity: [0, 1],
+              y: [-200, 0],
+
+              scale: [0, 1],
+            }}
+            transition={{ delay: 1, ease: "easeInOut" }}
+          >
             <div
               style={{
                 position: "relative",
@@ -101,8 +125,18 @@ const Header = () => {
               {shouldSpeak ? <BsFillVolumeUpFill /> : <BsFillVolumeMuteFill />}
               <span style={{ marginLeft: "2px" }}>Vaibhav Says!</span>
             </div>
-            <div>{marqueeText}</div>
-          </div>
+            <motion.div
+              whileInView={{
+                opacity: [0, 1],
+                y: [-200, 0],
+
+                scale: [0, 1],
+              }}
+              transition={{ delay: 1, ease: "easeInOut" }}
+            >
+              {marqueeText}
+            </motion.div>
+          </motion.div>
         </div>
         <div className="header__image">
           {[javascript, python, figma, firebase, react_js, flutter].map(
@@ -114,7 +148,7 @@ const Header = () => {
                   opacity: [0, 1],
                   scale: [0, key / 10 + 1],
                 }}
-                animate={{ rotate: 10 - 5 * key }}
+                // animate={{ rotate: 10 - 5 * key }}
                 // style={{ rotate: 0, x: "calc(50vh - 100px)" }}
                 // initial={{ x: "100%" }}
                 transition={{ duration: 1, delay: key / 2, ease: "easeInOut" }}

@@ -1,0 +1,46 @@
+.app__profiles{
+margin-top:5rem ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1rem;
+
+
+    
+    
+}
+
+.app__profile-item{
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+width: 25%;
+    img{
+        max-width: 100%;
+        object-fit: cover;
+        max-height: 20rem;
+        border-radius: 2%;
+
+
+    }
+    @media screen and (max-width:800px){
+width: 100%;        
+    }
+}
+
+
+
+
+.head-text{
+
+    width: 100%;
+}
