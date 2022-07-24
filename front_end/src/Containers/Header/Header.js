@@ -10,6 +10,8 @@ import {
   python,
   javascript,
 } from "../../Static/technologyImageExporter";
+import AppWrap from "../../wrapper/AppWrap";
+// import { AppWrap } from "../../wrapper";
 import { useSpeechSynthesis } from "react-speech-kit";
 import "./Header.scss";
 
@@ -34,7 +36,7 @@ const Header = () => {
   useEffect(() => {
     const textSetter = () => {
       if (shouldSpeak) {
-        speak({ text: marqueeText, voice: voices[4] });
+        speak({ text: marqueeText, voice: voices[2] });
       }
       //confusing logic huh,vaibhav was confused too
       setTimeout(() => {
@@ -53,7 +55,7 @@ const Header = () => {
   }, [shouldSpeak]);
 
   return (
-    <div className="app__header app__div " id="header">
+    <div id="header" className="app__header app__div ">
       <motion.div
         className="app__header-background"
         initial={{ scale: 0 }}
@@ -162,4 +164,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, "header");

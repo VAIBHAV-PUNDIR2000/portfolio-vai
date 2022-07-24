@@ -5,12 +5,12 @@
     justify-content: space-between;
     align-items: center;
     padding:  1rem 2 rem;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(70, 54, 74,0.1);
     backdrop-filter: blur(4px) ;
     -webkit-backdrop-filter: blur(4px);
    
     position:fixed;
-    z-index: 100;
+    z-index: 2000;
 }
 
 .app__navbar-logo{
@@ -21,6 +21,7 @@
 }
 .app__navbar-links{
     flex:1;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -35,6 +36,7 @@
        
         border-radius: 50%;
         margin-bottom: 5px;
+        
     }
     a{
         color:var(--gray-color);
@@ -80,10 +82,11 @@
         top:0;
         bottom: 0;
         right:0;
-        z-index: 15;
+        z-index: 4;
         padding: 1rem;
         width: 80%;
-        background-color: rgba(180, 233, 251, 0.95);  
+color:white;
+        background-color: var(--brown-color);  
  backdrop-filter: brightness(80%);
         height: 100vh;
         display: flex;
@@ -109,7 +112,7 @@
           margin: 1rem;
   
           a {
-            color: black;
+            color: wheat;
             text-decoration: none;
             font-size: 1rem;
             text-transform: uppercase;

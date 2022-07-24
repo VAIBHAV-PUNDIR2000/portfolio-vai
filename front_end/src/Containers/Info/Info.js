@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Info.scss";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
+import AppWrap from "../../wrapper/AppWrap";
 
 const Info = () => {
   const [cardInfo, setCardInfo] = useState([]);
@@ -33,10 +34,11 @@ const Info = () => {
   console.log(cardInfo);
   return (
     <div className="info">
-      <h2 className="head-text">
+      <div style={{ width: "100%", height: "2rem" }}></div>
+      <h2 className="head-text top-level-title">
         I Can Sip<span> Coffee, </span> Write <span>Code,</span> Design{" "}
         <span>Layouts &</span>
-        <br /> And Generates <span>Profits</span>
+        <br /> And Generates <span>Profits💵</span>
       </h2>
       <div className="app__profiles">
         {cardInfo?.map((data, index) => (
@@ -61,4 +63,4 @@ const Info = () => {
   );
 };
 
-export default Info;
+export default AppWrap(Info, "info");

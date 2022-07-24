@@ -2,6 +2,7 @@
   
   font-family: var(--font-base);
 background-color: var(--primary-color);
+scroll-behavior: smooth;
 
 }
 
@@ -61,7 +62,7 @@ background-color: var(--primary-color);
   text-transform: capitalize;
 
   span {
-    color: var(--secondary-color);
+    color: var(--brown-color);
   }
 
   @media screen and (min-width: 2000px) {
@@ -100,20 +101,28 @@ background-color: var(--primary-color);
 }
 
 .app__social {
+  // margin:0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  // padding: 1rem;
+  position: fixed;
+  z-index: 100000;
+  right: 1rem;
+  bottom: 2rem;
 
-  padding: 1rem;
+  
 
   div {
+    
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--white-color);
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(4px);
     margin: 0.25rem 0;
-    border: 1px solid var(--lightGray-color);
+    // border: 1px solid var(--lightGray-color);
 
     display: flex;
     justify-content: center;
@@ -121,20 +130,28 @@ background-color: var(--primary-color);
 
     transition: all 0.3s ease-in-out;
 
-    svg {
-      width: 15px;
-      height: 15px;
-      color: var(--gray-color);
-    }
 
     &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
-
+      
+      background-color: rgb(70, 54, 74);
+      // border-color: var(--brown-color);
+    
+      // transition: background-color 200ms ease-in-out;
       svg {
         color: var(--white-color);
       }
     }
+    &:active{
+      background-color: rgb(70, 54, 74);
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      color: var(--black-color);
+    }
+
+  
 
     @media screen and (min-width: 2000px) {
       width: 70px;
@@ -152,11 +169,13 @@ background-color: var(--primary-color);
 
 .app__navigation {
   display: flex;
+  // z-index: 10;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  padding: 1rem;
+position:absolute;
+  // padding: 1rem;
 
   .app__navigation-dot {
     width: 10px;
@@ -164,7 +183,7 @@ background-color: var(--primary-color);
     border-radius: 50%;
     background-color: #cbcbcb;
     margin: 0.5rem;
-
+// position: absolute;
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
@@ -179,12 +198,27 @@ background-color: var(--primary-color);
 }
 
 @media screen and (max-width: 500px) {
-  .app__navigation,
-  .app__social {
-    display: none;
-  }
+  // // .app__navigation,
+  // .app__social {
+  //   // display: none;
+  // }
 
   .copyright {
     padding: 2rem;
   }
 }
+
+.app__wrap{
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding: 0;
+margin: 0;
+// right: 0;
+// left: 0;
+}
+

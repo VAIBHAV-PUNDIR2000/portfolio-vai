@@ -10,6 +10,7 @@ margin-top:5rem ;
 }
 
 .app__profile-item{
+    z-index: 10000;
     padding: 1rem;
     backdrop-filter: blur(5px);
     margin: 2rem;
@@ -36,6 +37,7 @@ width: 100%;
 
 .info{
     margin-top: 10vh;
+    // height: 100vh;
 }
 
 
@@ -44,4 +46,8 @@ width: 100%;
 .head-text{
 
     width: 100%;
+}
+
+.top-level-title{
+    margin-top: 10vh;
 }

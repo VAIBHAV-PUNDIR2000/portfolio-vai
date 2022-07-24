@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <VscPerson fontSize={50} style={{ fill: "#46364a" }} />
+        <VscPerson fontSize={50} style={{ fill: "var(--brown-color)" }} />
         <span className="app__navbar-logo-text">Port</span>
         <span
           className="app__navbar-logo-text"
@@ -18,12 +18,16 @@ const Navbar = () => {
         </span>
       </div>
       <ul className="app__navbar-links">
-        {["Home", "About", "Contact", "Projects", "Skills", "Footer"].map(
+        {["header", "info", "Contact", "Projects", "Skills", "Footer"].map(
           (e) => {
             return (
               <li className="app__flex p-text" key={`link-${e}`}>
                 <div>
-                  <a href={`#${e}`} className=".app__navbar-links">
+                  <a
+                    href={`#${e}`}
+                    className="app__navbar-links"
+                    style={{ textTransform: "uppercase" }}
+                  >
                     {e}
                   </a>
                 </div>
@@ -52,9 +56,13 @@ const Navbar = () => {
           >
             <AiOutlineClose onClick={() => setToggle(false)} />
             <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
+              {["home", "info", "work", "skills", "contact"].map((item) => (
                 <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
+                  <a
+                    href={`#${item}`}
+                    style={{ textTransform: "uppercase" }}
+                    onClick={() => setToggle(false)}
+                  >
                     {item}
                   </a>
                 </li>
