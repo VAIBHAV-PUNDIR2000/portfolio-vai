@@ -88,6 +88,7 @@ const Header = () => {
           "Cross platform Flutter Developer",
         ].map((e, key) => (
           <motion.div
+            key={`tagline-${key}`}
             className=""
             animate="show"
             whileInView={{ opacity: [0, 1] }}
@@ -151,7 +152,7 @@ const Header = () => {
                 // animate={{ rotate: 10 - 5 * key }}
                 // style={{ rotate: 0, x: "calc(50vh - 100px)" }}
                 // initial={{ x: "100%" }}
-                transition={{ duration: 1, delay: key / 2, ease: "easeInOut" }}
+                transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
               ></motion.img>
             )
           )}

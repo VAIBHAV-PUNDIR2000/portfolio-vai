@@ -7,10 +7,6 @@ margin-top:5rem ;
     justify-content: space-around;
     width: 100%;
     padding: 1rem;
-
-
-    
-    
 }
 
 .app__profile-item{
@@ -24,6 +20,7 @@ margin-top:5rem ;
     text-align: justify;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 width: 25%;
+height:50vh; 
     img{
         max-width: 100%;
         object-fit: cover;
@@ -35,6 +32,10 @@ width: 25%;
     @media screen and (max-width:800px){
 width: 100%;        
     }
+}
+
+.info{
+    margin-top: 10vh;
 }
 
 

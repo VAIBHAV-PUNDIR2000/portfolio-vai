@@ -8,8 +8,14 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <VscPerson fontSize={50} />
-        <span className="app__navbar-logo-text">Vaibhav-pundir</span>
+        <VscPerson fontSize={50} style={{ fill: "#46364a" }} />
+        <span className="app__navbar-logo-text">Port</span>
+        <span
+          className="app__navbar-logo-text"
+          style={{ color: "#46364a", textDecoration: "none" }}
+        >
+          Foliat
+        </span>
       </div>
       <ul className="app__navbar-links">
         {["Home", "About", "Contact", "Projects", "Skills", "Footer"].map(
@@ -28,6 +34,13 @@ const Navbar = () => {
       </ul>
       <div className="app__navbar-menu">
         <AiOutlineMenu
+          size={20}
+          style={{
+            borderRadius: "50%",
+            backgroundColor: "#46364a",
+            padding: "8px",
+            // size: "19px",
+          }}
           onClick={() => {
             setToggle(true);
           }}
