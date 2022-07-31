@@ -36,7 +36,7 @@ const Header = () => {
   useEffect(() => {
     const textSetter = () => {
       if (shouldSpeak) {
-        speak({ text: marqueeText, voice: voices[2] });
+        speak({ text: marqueeText, voice: voices[5] });
       }
       //confusing logic huh,vaibhav was confused too
       setTimeout(() => {
@@ -120,9 +120,11 @@ const Header = () => {
                 top: "7rem",
                 display: "flex",
                 alignItems: "center",
+                zIndex: 10000000000000,
               }}
               onClick={() => {
                 setShouldSpeak(!shouldSpeak);
+                console.log("here");
               }}
             >
               {shouldSpeak ? <BsFillVolumeUpFill /> : <BsFillVolumeMuteFill />}
