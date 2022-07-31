@@ -108,7 +108,7 @@ scroll-behavior: smooth;
   flex-direction: column;
   // padding: 1rem;
   position: fixed;
-  z-index: 100000;
+  z-index: 10000;
   right: 1rem;
   bottom: 2rem;
 
@@ -169,7 +169,7 @@ scroll-behavior: smooth;
 
 .app__navigation {
   display: flex;
-  // z-index: 10;
+  z-index: 10;  
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -211,7 +211,7 @@ position:absolute;
 .app__wrap{
   height: 100%;
   width: 100%;
-  z-index: 1000;
+  
 position: absolute;
 display: flex;
 align-items: center;

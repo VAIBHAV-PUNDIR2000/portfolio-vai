@@ -11,8 +11,8 @@ const App = () => {
       <SocialMedia />
       <Header />
       <Info />
-      <Skills />
       <Projects />
+      <Skills />
       <Footer />
     </div>
   );

@@ -1,0 +1,30 @@
+.app__footer-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+
+}
+
+.app__footer-section-form{
+    max-width: 60%;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+
+}
+
+.app__footer-section-svg{
+    max-width: 40%;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+.app__footer-section-svg,.app__footer-section-form{
+@media screen and (max-width:800px){
+    max-width: 100%;
+    
+}
+}

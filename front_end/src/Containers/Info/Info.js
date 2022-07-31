@@ -3,7 +3,7 @@ import "./Info.scss";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
-
+import Background from "../../Static/Constants/background.svg";
 const Info = () => {
   const [cardInfo, setCardInfo] = useState([]);
   useEffect(() => {
@@ -35,17 +35,21 @@ const Info = () => {
   return (
     <div className="info">
       <div style={{ width: "100%", height: "2rem" }}></div>
-      <h2 className="head-text top-level-title">
+      <motion.h2
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.9 }}
+        className="head-text top-level-title"
+      >
         I Can Sip<span> Coffee, </span> Write <span>Code,</span> Design{" "}
         <span>Layouts &</span>
         <br /> And Generates <span>Profits💵</span>
-      </h2>
+      </motion.h2>
       <div className="app__profiles">
         {cardInfo?.map((data, index) => (
           <motion.div
             key={`InfoCard-${data.title}`}
             className="app__profile-item"
-            whileInView={{ opacity: 1, y: [100, 0] }}
+            whileInView={{ opacity: 1, y: [50, 0] }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.9, type: "tween" }}
           >
