@@ -37,7 +37,7 @@ const Projects = () => {
       }
     }, 500);
   };
-  console.log(works);
+
   return (
     <div id="works" className="app__projects-main">
       <motion.div
@@ -49,7 +49,7 @@ const Projects = () => {
         // transition={{ duration: 1000, delayChildren: 0.2 }}
       >
         {[1, 2, 3, 4, 5].map((_, key) => (
-          <motion.div></motion.div>
+          <motion.div key={key}></motion.div>
         ))}
       </motion.div>
       <div style={{ width: "100%", height: "2rem" }}></div>
@@ -89,7 +89,8 @@ const Projects = () => {
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
 
                 <motion.div
-                  whileHover={{ opacity: [0, 1] }}
+                  initial={{ opacity: 1 }}
+                  whileHover={{ opacity: [0.5, 1] }}
                   transition={{
                     duration: 0.25,
                     ease: "easeInOut",

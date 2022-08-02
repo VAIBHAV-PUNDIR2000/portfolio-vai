@@ -31,7 +31,7 @@ const Info = () => {
   //     img: `https://source.unsplash.com/random/uidesigner`,
   //   },
   // ];
-  console.log(cardInfo);
+  // console.log(cardInfo);
   return (
     <div className="info">
       <div style={{ width: "100%", height: "2rem" }}></div>
@@ -39,10 +39,12 @@ const Info = () => {
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
         className="head-text top-level-title"
+        style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
       >
-        I Can Sip<span> Coffee, </span> Write <span>Code,</span> Design{" "}
+        I Can Sip<span> Coffee, </span> write <span>Code,</span> Design{" "}
         <span>Layouts &</span>
-        <br /> And Generates <span>Profits💵</span>
+        <br /> and generates{" "}
+        <span style={{ transform: "scale(2)" }}>Profits</span>
       </motion.h2>
       <div className="app__profiles">
         {cardInfo?.map((data, index) => (

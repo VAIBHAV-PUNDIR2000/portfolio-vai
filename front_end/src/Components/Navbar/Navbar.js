@@ -18,23 +18,21 @@ const Navbar = () => {
         </span>
       </div>
       <ul className="app__navbar-links">
-        {["header", "info", "Contact", "Projects", "Skills", "Footer"].map(
-          (e) => {
-            return (
-              <li className="app__flex p-text" key={`link-${e}`}>
-                <div>
-                  <a
-                    href={`#${e}`}
-                    className="app__navbar-links"
-                    style={{ textTransform: "uppercase" }}
-                  >
-                    {e}
-                  </a>
-                </div>
-              </li>
-            );
-          }
-        )}
+        {["header", "info", "projects", "skills", "footer"].map((e) => {
+          return (
+            <li className="app__flex p-text" key={`link-${e}`}>
+              <div>
+                <a
+                  href={`#${e}`}
+                  className="app__navbar-links"
+                  style={{ textTransform: "uppercase" }}
+                >
+                  {e}
+                </a>
+              </div>
+            </li>
+          );
+        })}
       </ul>
       <div className="app__navbar-menu">
         <AiOutlineMenu
@@ -54,19 +52,28 @@ const Navbar = () => {
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.4, easings: ["easeIn", "easeOut"] }}
           >
-            <AiOutlineClose onClick={() => setToggle(false)} />
+            <AiOutlineClose
+              style={{
+                borderRadius: "50%",
+                backgroundColor: "#F9F5E8",
+                color: "var(--brown-color)",
+              }}
+              onClick={() => setToggle(false)}
+            />
             <ul>
-              {["home", "info", "work", "skills", "contact"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item}`}
-                    style={{ textTransform: "uppercase" }}
-                    onClick={() => setToggle(false)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["header", "info", "projects", "skills", "footer"].map(
+                (item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item}`}
+                      style={{ textTransform: "uppercase" }}
+                      onClick={() => setToggle(false)}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </motion.div>
         )}

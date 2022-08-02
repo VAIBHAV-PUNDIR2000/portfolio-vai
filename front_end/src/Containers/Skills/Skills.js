@@ -7,7 +7,7 @@ import AppWrap from "../../wrapper/AppWrap";
 const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [filterSkills, setFilterSkills] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("Development");
+  const [activeFilter, setActiveFilter] = useState("Design");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
@@ -15,9 +15,12 @@ const Skills = () => {
 
     client.fetch(query).then((data) => {
       setSkills(data);
-      setFilterSkills(data);
+      // handleskillsFilter(activeFilter);
     });
   }, []);
+  useEffect(() => {
+    handleskillsFilter(activeFilter);
+  }, [skills]);
 
   const handleskillsFilter = (item) => {
     setActiveFilter(item);

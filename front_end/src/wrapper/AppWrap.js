@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavigationDots, SocialMedia } from "../Components/index";
 
 const AppWrap = (Component, idName, classNames) =>

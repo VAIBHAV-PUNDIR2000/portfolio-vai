@@ -18,15 +18,16 @@ import "./Header.scss";
 const Header = () => {
   const { speak, cancel, voices } = useSpeechSynthesis();
   const aboutMe = [
-    "Hello there!❤️, My Self Vaibhav Pundir",
+    "Hello there!, My Self Vaibhav Pundir",
     "I love working with Front-end techs as well as designs",
     "Lemme create Your Front-end,Both Responsive and ReactJSive",
     "React or angular?.. Huh i love both but excel reactJs better",
-    "Let me Figma your layout , I can Handle Colors pretty well 😁",
+    "Let me Figma your layout , I can Handle Colors pretty well ",
     "Is it Your Back-end or Back-ward end?Lemme Bring some FireBase to it!",
-    "My eduction 🎓? yea ! its Master's in computer applications from Chandrigarh University, punjab!",
-    "lol! 😁i Can center Your div as well!",
+    "My education ? yea ! its Master's in computer applications from Chandrigarh University, punjab!",
+    "lol! i Can center Your div as well!",
     "I do some leetCode too.. Visit my Leetcode link to look",
+    "Have a Look At my LinkedIn profile",
     "I Have created some good learning projects at the bottom!",
   ];
   // const { speak } = useSpeechSynthesis();
@@ -36,7 +37,7 @@ const Header = () => {
   useEffect(() => {
     const textSetter = () => {
       if (shouldSpeak) {
-        speak({ text: marqueeText, voice: voices[5] });
+        speak({ text: marqueeText, voice: voices[4] });
       }
       //confusing logic huh,vaibhav was confused too
       setTimeout(() => {
@@ -64,8 +65,8 @@ const Header = () => {
 
         // transition={{ duration: 1000, delayChildren: 0.2 }}
       >
-        {[1, 2, 3, 4, 5].map((_, key) => (
-          <motion.div></motion.div>
+        {[1, 2, 3, 4, 5].map((_, index) => (
+          <motion.div key={index}></motion.div>
         ))}
       </motion.div>
       <motion.div
@@ -124,7 +125,7 @@ const Header = () => {
               }}
               onClick={() => {
                 setShouldSpeak(!shouldSpeak);
-                console.log("here");
+                // console.log("here");
               }}
             >
               {shouldSpeak ? <BsFillVolumeUpFill /> : <BsFillVolumeMuteFill />}
@@ -147,6 +148,7 @@ const Header = () => {
           {[javascript, python, figma, firebase, react_js, flutter].map(
             (image, key) => (
               <motion.img
+                key={key}
                 src={image}
                 whileInView={{
                   y: [100, 0],
@@ -156,7 +158,7 @@ const Header = () => {
                 // animate={{ rotate: 10 - 5 * key }}
                 // style={{ rotate: 0, x: "calc(50vh - 100px)" }}
                 // initial={{ x: "100%" }}
-                transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
+                transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
               ></motion.img>
             )
           )}
